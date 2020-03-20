@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "dev.mars.openslesdemo"
         minSdkVersion 14
@@ -11,14 +12,13 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
-            abiFilters 'armeabi','arm64-v8a', 'x86'
+            abiFilters 'arm64-v8a'
         }
         externalNativeBuild {
             cmake {
-                arguments '-DANDROID_TOOLCHAIN=clang','-DANDROID_STL=gnustl_static'
+                cppFlags "-std=c++14"
             }
         }
-        //, 'arm64-v8a', 'x86', 'x86_64'
     }
     buildTypes {
         release {
@@ -40,4 +40,8 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

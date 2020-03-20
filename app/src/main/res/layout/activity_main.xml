@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:onClick="startRecord"
-            android:text="通过opensl录制pcm" />
+            android:textAllCaps="false"
+            android:text="通过opensl录制pcm (startRecord)" />
 
         <Button
             android:id="@+id/btnStop"
@@ -29,7 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnStart"
             android:onClick="stopRecord"
-            android:text="停止录制" />
+            android:textAllCaps="false"
+            android:text="停止录制 (stopRecord)" />
 
         <Button
             android:id="@+id/btnStartPlay"
@@ -37,7 +39,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnStop"
             android:onClick="startPlay"
-            android:text="通过opensl播放pcm" />
+            android:textAllCaps="false"
+            android:text="通过opensl播放pcm (startPlay)" />
 
         <Button
             android:id="@+id/btnStopPlay"
@@ -45,50 +48,56 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnStartPlay"
             android:onClick="stopPlay"
-            android:text="停止播放" />
+            android:textAllCaps="false"
+            android:text="停止播放 (stopPlay)" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="encodeWithSpeex"
-            android:text="用speex对录制的pcm编码" />
+            android:textAllCaps="false"
+            android:text="用speex对录制的pcm编码 (encodeWithSpeex)" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="decodeWithSpeex"
-            android:text="用speex对编码的speex音频解码并生成新的pcm" />
+            android:textAllCaps="false"
+            android:text="用speex对编码的speex音频解码并生成新的pcm (decodeWithSpeex)" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="playOutpuPCM"
-            android:text="播放解码生成的pcm" />
+            android:onClick="playOutputPCM"
+            android:textAllCaps="false"
+            android:text="播放解码生成的pcm (playOutputPCM)" />
 
         <CheckBox
             android:id="@+id/cb1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="允许降噪增益处理" />
+            android:textAllCaps="false"
+            android:text="允许降噪增益处理 (enableProcess)" />
 
         <CheckBox
             android:id="@+id/cb2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="开启回声消除" />
+            android:textAllCaps="false"
+            android:text="开启回声消除 (enableEchoCancel)" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="recordAndPlayPCM"
-            android:text="PCM录制并播放" />
+            android:text="PCM录制并播放 (recordAndPlayPCM)" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="stopRecordAndPlayPCM"
-            android:text="停止PCM录制并播放" />
+            android:text="停止PCM录制并播放 (stopRecordAndPlayPCM)" />
     </LinearLayout>
 </ScrollView>
